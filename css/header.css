@@ -1,0 +1,28 @@
+/* Header */
+header{
+    margin: 2.5vh;
+    padding: 1.5vh;
+    margin-bottom: 0;
+    min-height: 20vh;
+    position: relative;
+}
+header img{
+    width: 20%;
+    height: 20vh;
+    position: absolute;
+    right: 20vh;
+    top: 5vh;
+}
+#menu{
+    width: 100%;
+}
+
+#titulo{
+    padding: 2.5vh;
+    height: 10vh;
+    font-size: 30px;
+}
+nav{
+    padding: 2.5vh;
+    gap: 8vh;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="flex-col">
+    <header class="flex-row">
+        <section id="menu">
+            <div id="titulo">
+                <p>Practica de javascript</p>
+            </div>
+            <nav class="flex-row">
+                <span>Menu</span>
+                <a href="">f</a>
+                <a href="">f</a>
+                <a href="">f</a>
+                <a href="">f</a>
+            </nav>
+        </section>
+        <img style="align-self: flex-end;" src="https://i.pinimg.com/736x/04/91/fc/0491fc12a230f0013e3e563be70ac725.jpg" alt="">
+    
+    </header>
+    <main class="flex-col">
+        <section id="ejer1">
+            <h2>1. Cambiar texto</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem explicabo aut porro iste. Repellendus at blanditiis velit provident veritatis corrupti sequi quod sapiente ipsam id? Omnis consequatur distinctio unde. Quia.</p>
+            <div class="flex-row" id="contenedorEjemplo">
+                <div class="flex-col" id="contenedorNoCLOL">
+                    <div id="cuadroTexto">
+                        Este texto cambiara cuando se presione el boton
+                    </div>
+                </div>
+                <div class="flex-col" id="contenedorBoton">
+                    <img class="flecha f1" src="https://www.pikpng.com/pngl/b/365-3650457_flecha-hacia-la-derecha-png-arrow-left-to.png">
+                    <img class="flecha f2" src="https://www.pikpng.com/pngl/b/365-3650457_flecha-hacia-la-derecha-png-arrow-left-to.png">
+                    <img class="flecha f3" src="https://www.pikpng.com/pngl/b/365-3650457_flecha-hacia-la-derecha-png-arrow-left-to.png">
+                    <img class="flecha f4" src="https://www.pikpng.com/pngl/b/365-3650457_flecha-hacia-la-derecha-png-arrow-left-to.png">
+                    <img class="flecha f5" src="https://www.pikpng.com/pngl/b/365-3650457_flecha-hacia-la-derecha-png-arrow-left-to.png">
+                    <img class="flecha f6" src="https://www.pikpng.com/pngl/b/365-3650457_flecha-hacia-la-derecha-png-arrow-left-to.png">
+                    <img class="flecha f7" src="https://www.pikpng.com/pngl/b/365-3650457_flecha-hacia-la-derecha-png-arrow-left-to.png">
+                    <img class="flecha f8" src="https://www.pikpng.com/pngl/b/365-3650457_flecha-hacia-la-derecha-png-arrow-left-to.png">
+                    <button id="btnCambiarTexto">Cambiar texto</button>
+                </div>
+            </div>
+            <script>
+                btnCambiarTexto.addEventListener("click",function(){
+                    btnCambiarTexto.style.backgroundColor = 'green';
+                    escribir("El texto cambio",cuadroTexto);
+                })
+                function escribir(contenido,cuadroTexto){
+                    cuadroTexto.textContent="";
+                    let i=0;
+                    let intervalo = setInterval(()=>{
+                        cuadroTexto.textContent += contenido[i];
+                        i++;
+                        if(i>=contenido.length) clearInterval(intervalo);
+                    },70);
+                }
+                
+            </script>
+        </section>
+        <section id="ejer2">
+            <h2>2. Crear elemento</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error perferendis soluta molestiae odio expedita illo illum, culpa quasi nemo dolorem reiciendis animi odit quisquam ea ex .</p>
+            <div class="flex-row" id="contenedorEjemplo">
+                <div class="flex-col" id="contenedorNoCLOL">
+                    <ul id="lista" >
+                        <li>j</li>
+                    </ul>
+                </div>
+                <div class="flex-col" id="contenedorBoton">
+                    <button id="agregarElemento">Agregar elemento</button>
+                </div>
+            </div>
+            <script>
+                let boton = document.getElementById("agregarElemento");
+                boton.addEventListener("click",function(){
+                    const li = document.createElement("li");
+                    li.textContent = "agregado con javascript";
+                    document.getElementById("lista").appendChild(li);
+                    boton.classList.remove("botonActivo");
+                    boton.offsetHeight; 
+                    boton.classList.add("botonActivo");
+                })
+            </script>
+        </section>
+        <section id="ejer3">
+            <h2>3. Contador</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed maxime doloribus soluta? Dolorem tempore ut expedita dolor exercitationem aut, assumenda illum. Velit necessitatibus nostrum exercitationem, perferendis nobis pariatur ea?</p>
+            <div class="flex-row" id="contenedorEjemplo">
+                <div class="flex-col" id="contenedorNoCLOL">
+                    <div id="contenedorContador" class="flex-row" style="text-align: center;justify-content: center;">
+                        <div class="centrado" style="width:50%; border-bottom:2px solid black; border-right:2px solid black;">Numero:</div>
+                        <div class="centrado" id="numero" style="width:50%; border-bottom:2px solid black;">0</div>
+                        <div class="centrado" style="width:100%;padding: 2vh;">Cada ves que le des al boton el numero aumentara en 1</div>
+                    </div>
+                </div>
+                <div class="flex-col" id="contenedorBoton">
+                    <button id="incrementarNumero">incrementar numero</button>
+                </div>
+            </div>
+        </section>      
+
+        <script>
+            let boton2 = document.getElementById("incrementarNumero");
+            boton2.addEventListener("click",function(){
+                let numero = document.getElementById("numero");
+                numero.textContent = parseInt(numero.textContent)+1;
+                boton2.classList.remove("botonActivo");
+                boton2.offsetHeight; 
+                boton2.classList.add("botonActivo");
+            });
+        </script>  
+    </main>
+    <footer class="flex-row">
+        <section>
+
+        </section>
+        <section>
+
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+main{
+    margin: 2.5vh;
+    padding: 1.5vh;
+    margin-top: 0;
+}
+#ejer1,#ejer2,#ejer3{
+    padding: 2.5vh;
+}
+h2{
+    line-height: 2.2;
+}
+#contenedorEjemplo{
+    padding: 2.5vh;
+    margin-top: 2.5vh;
+    background-color: rgb(176, 176, 179);
+    height: 40vh;
+}
+#contenedorNoCLOL{
+    background-color: rgb(141, 132, 132);
+    width: 50%;
+    align-items: center;
+    justify-content: center;     
+}
+#cuadroTexto ,#lista,#contenedorContador{
+    background-color: bisque;
+    width: 70%;
+    height: 20vh;
+    padding: 2.5vh;
+    border: 2px solid black;
+    overflow-y: auto;
+}
+#lista li{
+    margin-left: 4vh;
+}
+#contenedorContador{
+    flex-wrap: wrap;
+    padding: 0;
+}
+#contenedorBoton{
+    position: relative;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+#contenedorBoton button{
+    height: 10vh;
+    width: 30%;
+    background-color: rgb(228, 42, 42);
+    cursor: pointer;
+}
+.botonActivo{
+    animation: cambiar 0.2s ease;
+}
+
+@keyframes cambiar{
+    0%{background:rgb(228, 42, 42);}
+    50%{background:green;}
+    100%{background:rgb(228, 42, 42);}
+}
+.flecha{
+    position: absolute;
+    height: 6vh;
+    width: 10%;
+}
+.centrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.f1{ top:5%; left:45%; transform: rotate(-90deg); }
+.f2{ top:10%; left:25%; transform: rotate(-140deg); }
+.f3{ top:10%; left:65%; transform: rotate(-40deg); }
+.f4{ top:40%; left:70%; transform: rotate(0deg); }
+.f5{ top:65%; left:65%; transform: rotate(30deg); }
+.f6{ top:70%; left:45%; transform: rotate(90deg); }
+.f7{ top:65%; left:25%; transform: rotate(140deg); }
+.f8{ top:40%; left:20%; transform: rotate(180deg); }
